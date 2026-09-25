@@ -1,0 +1,89 @@
+:root {
+  --brand: #488f60;
+  --accent: #3498db;
+  --ink: #333;
+  --font-body: 'Arial', sans-serif;
+  --font-heading: 'Georgia', serif;
+}
+
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* Header with Flexbox */
+header {
+  background: var(--brand);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Projects with Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: #f9f9f9;
+  text-align: left;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  background: var(--brand);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
